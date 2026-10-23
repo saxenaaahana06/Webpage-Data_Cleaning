@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONGC - OIL AND NATURAL GAS CORPORATION</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            background-color: #e9d1d1; 
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; 
+        }
+        header {
+            background-color: #741717;
+            margin:0;
+            padding: 0;
+            display: flex;
+        }
+
+        header img {
+            margin-bottom: px;
+            padding: auto;
+            filter: drop-shadow(0px 0px 5px rgba(255,255,255,0.3));
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+        }
+
+        section {
+            flex: 1;
+            max-width: 700px;
+            width: 90%;
+            margin: 50px auto; 
+            padding: 40px;
+            background: #eb9595;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 20px;
+            text-decoration: none !important;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+       
+        input[type="file"] {
+            padding: 15px;
+            border: 2px dashed #436c77; 
+            border-radius: 8px;
+            width: 100%;
+            margin-bottom: 30px;
+            cursor: pointer;
+            background: #edd8cc;
+        }
+
+        .btn-submit {
+            background-color: #e78f3c;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 30px; 
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn-submit:hover {
+            background-color: #6d3b06;
+        }
+
+        footer {
+            background: #e9d1d1;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 60px;
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header style="width: 100%;">
+    <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px; gap: 1180px">
+        <img src="{{ url_for('static', filename='android-chrome-512x512.png') }}" alt="ONGC Logo" width="100" height="100">
+        <img src="{{ url_for('static', filename='banner.png') }}" alt="ONGC building" width="200">
+    </div>
+</header>
+
+<main>
+    <section>
+        <h2><u>SEISDATA PROCESSING CENTER</u></h2>
+        <h4>Welcome to SPIC Tape Details Repository Management Portal</h4>
+        <form action="/convert" method="post" enctype="multipart/form-data">
+    <p>Input .txt Files</p>
+    <input type="file" name="input_file" accept=".txt" required multiple>
+    <br>
+    <button type="submit" class="btn-submit">SUBMIT FILES</button>
+</form>
+    </section>
+</main>
+<footer>
+    <i>For more information, visit our <u><a href="https://ongcindia.com/web/eng" target="_blank">home page</a></u></i>
+</footer>
+
+</body>
+</html>
